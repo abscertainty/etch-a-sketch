@@ -39,23 +39,21 @@ body {
     flex-direction: column;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 64px;
+    align-items: stretch;
+    padding: 32px 255px;
 }
 
 .row {
    display: flex; 
-   height: 12px;
+   flex: auto;
 }
 
 .grid {
-    height: 12px;
-    width: 12px;
-    flex: 1;
+    flex: auto;
     border: 1px #d7005c solid;
 }
 
 .color-change {
-    border: 1px #042926 solid;
+    border: 1px #e8f0f1 solid;
     background-color: #042926;
 }
