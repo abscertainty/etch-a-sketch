@@ -49,11 +49,27 @@ body {
 }
 
 .grid {
+    margin: 0;
+    padding: 0;
     flex: auto;
     border: 1px #d7005c solid;
 }
 
+.change-dimensions {
+    margin-left: auto;
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #042926;
+    border-radius: 6px;
+}
+
+.change-dimensions:hover {
+    color: #d7005c;
+    background-color: #e8f0f1;
+    border: 0;
+}
+
 .color-change {
-    border: 1px #e8f0f1 solid;
     background-color: #042926;
+    opacity: 10%;
 }

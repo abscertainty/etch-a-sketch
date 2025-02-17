@@ -1,19 +1,41 @@
 const container = document.querySelector('.container');
 let gridDimensions = 16;
 
-for (let i = 0; i < gridDimensions; i++) {
-    const row = document.createElement('div');
-    row.classList.add('row');
-    for (let j = 0; j < gridDimensions; j++) {
-        const grid = document.createElement('div');
-        grid.classList.add('grid');
-        grid.addEventListener('mouseenter', changeGridColor);
-        row.appendChild(grid);
+function drawGrid(dimensions) {
+    for (let i = 0; i < dimensions; i++) {
+        const row = document.createElement('div');
+        row.classList.add('row');
+        for (let j = 0; j < dimensions; j++) {
+            const grid = document.createElement('div');
+            grid.classList.add('grid');
+            grid.addEventListener('mouseenter', changeGridColor);
+            row.appendChild(grid);
+        }
+        container.appendChild(row);
     }
-    container.appendChild(row);
 }
 
 function changeGridColor(e) {
     e.target.classList.add('color-change');
 }
 
+drawGrid(gridDimensions);
+
+function clearGrid() {
+    while (container.lastElementChild) {
+        container.removeChild(container.lastElementChild);
+    }
+}
+
+function getNewGridDimensions() {
+    let newDimensions;
+    newDimensions = parseInt(prompt("Enter new grid dimensions (max 100)"), 16);
+    if (isNaN(newDimensions) || newDimensions < 1 || newDimensions > 100) {
+        return;
+    }
+    clearGrid();
+    drawGrid(newDimensions);
+}
+
+const changeDimensionsBtn = document.querySelector('.change-dimensions');
+changeDimensionsBtn.addEventListener('click', getNewGridDimensions);
