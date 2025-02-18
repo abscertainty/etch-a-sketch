@@ -1,4 +1,5 @@
 const container = document.querySelector('.container');
+
 let gridDimensions = 16;
 
 function drawGrid(dimensions) {
@@ -16,7 +17,14 @@ function drawGrid(dimensions) {
 }
 
 function changeGridColor(e) {
-    e.target.classList.add('color-change');
+    if (e.target.style.opacity >= 1) return;
+
+    if (!e.target.classList.contains('color-change')) {
+        e.target.classList.add('color-change');
+    }
+
+    let newOpacity = +e.target.style.opacity + 0.1;
+    e.target.style.opacity = newOpacity;
 }
 
 drawGrid(gridDimensions);

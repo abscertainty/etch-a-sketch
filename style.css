@@ -40,7 +40,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    padding: 32px 255px;
+    padding: 24px 336px;
 }
 
 .row {
@@ -59,17 +59,19 @@ body {
     margin-left: auto;
     padding: 4px 6px;
     font-size: 16px;
-    color: #042926;
+    color: #d7005c;
+    background-color: #e8f0f1;
     border-radius: 6px;
+    border: 1px #e8f0f1 solid;
 }
 
 .change-dimensions:hover {
-    color: #d7005c;
-    background-color: #e8f0f1;
-    border: 0;
+    color: #e8f0f1;
+    background-color: #d7005c;
+    border: 1px #e8f0f1 solid;
 }
 
 .color-change {
-    background-color: #042926;
-    opacity: 10%;
+    background-color: #d7005c;
+    opacity: 0;
 }
