@@ -29,7 +29,7 @@ function clearGrid() {
 
 function getNewGridDimensions() {
     let newDimensions;
-    newDimensions = parseInt(prompt("Enter new grid dimensions (max 100)"), 16);
+    newDimensions = parseInt(prompt("Enter new grid dimensions (max 100)"));
     if (isNaN(newDimensions) || newDimensions < 1 || newDimensions > 100) {
         return;
     }
